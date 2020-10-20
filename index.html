@@ -744,6 +744,22 @@
 <p><strong>Greetings to you!</strong></p>
 <p><strong>Welcome to Sanchit&rsquo;s Home Page</strong></p>
 <p><span style="text-shadow: none;"><a class="github-button" href="https://github.com/sanchit002sanchit002/" data-icon="octicon-star" data-size="large" data-show-count="false" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span></p>
+
+<script>
+var audio = new Audio();
+audio.src = 'sample.mp3';
+audio.controls = true;
+audio.autoplay = true;
+document.body.appendChild(audio);
+var context = new webkitAudioContext();
+var analyser = context.createAnalyser();
+window.addEventListener('load', function(e) {
+  var source = context.createMediaElementSource(audio);
+  source.connect(analyser);
+  analyser.connect(context.destination);
+}, false);
+</script>
+
 <p><strong>State of Tranquillity</strong> :</p>
 <p>The dark clouds that were there, the horizon got cleared and there is clear  sky during the day.
 But during the twilight, again all the clouds comes back.</p>
