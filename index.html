@@ -776,21 +776,6 @@ Some are born great, some achieve greatness, and some <strong>have greatness thr
 </div>
     
 
-<script>
-var audio = new Audio();
-audio.src = 'sample.mp3';
-audio.controls = true;
-audio.autoplay = true;
-document.body.appendChild(audio);
-var context = new webkitAudioContext();
-var analyser = context.createAnalyser();
-window.addEventListener('load', function(e) {
-  var source = context.createMediaElementSource(audio);
-  source.connect(analyser);
-  analyser.connect(context.destination);
-}, false);
-</script>
-
     
     
       
@@ -818,6 +803,22 @@ window.addEventListener('load', function(e) {
   
   
   </div>
+
+<script>
+var audio = new Audio();
+audio.src = 'sample.mp3';
+audio.controls = true;
+audio.autoplay = true;
+document.body.appendChild(audio);
+var context = new webkitAudioContext();
+var analyser = context.createAnalyser();
+window.addEventListener('load', function(e) {
+  var source = context.createMediaElementSource(audio);
+  source.connect(analyser);
+  analyser.connect(context.destination);
+}, false);
+</script>
+
   <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
     <img src="/img/hero-academic.png" alt="">
   </div>
@@ -1966,9 +1967,9 @@ With grateful heart I bless these ills That teach me to love Thee and Thy light.
 
 
   <p class="powered-by">
-    Developed by
-    <a href="https://sanchit-ghule.github.io/" target="_blank" rel="noopener">Sanchit Ghule</a> for
-    <a href="https://sanchit-ghule.github.io/" target="_blank" rel="noopener">sanchit-ghule.github.io</a>.
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
     
     <span class="float-right" aria-hidden="true">
